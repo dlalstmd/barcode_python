@@ -1,0 +1,10 @@
+array = [2, 5, 1, 10, 6]
+
+def insertion_sort(array):
+    for i in range(1, len(array)):
+        for j in range(i, 0, -1): #리스트 오른쪽 부터 왼쪽으로 한칸씩 검사
+            if array[j] < array[j-1]:
+                array[j], array[j-1] = array[j-1], array[j] #만약 오른쪽 값이 작다면 값 바꿔주기
+
+insertion_sort(array)
+print(array)
